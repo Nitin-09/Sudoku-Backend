@@ -19,5 +19,6 @@ app.use('/.netlify/functions/api/dashboard',require('../routes/dashboard'))
 app.listen(port, () => {
   console.log(`Backend of Sudoku listening on port ${port}`)
 })
+
 module.exports = app
 module.exports.handler = serverless(app)
