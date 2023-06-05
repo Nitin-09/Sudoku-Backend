@@ -3,11 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "npm run build:client & npm run build:server",
-    "build:client": "webpack --config webpack.client.js",
-    "build:server": "netlify-lambda build src/server/functions -c webpack.server.js",
-    "start": "netlify-lambda serve src/server/functions",
-    "start:dev": "npm run build:client -- --watch"
+    "start": "./node_modules/.bin/netlify-lambda serve src",
+    "build": "./node_modules/.bin/netlify-lambda build src"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -22,6 +19,7 @@
     "serverless-http": "^3.2.0"
   },
   "devDependencies": {},
+
   "author": "",
   "license": "ISC",
   "description": ""
