@@ -17,5 +17,9 @@ app.use('/.netlify/functions/api/game',require('../routes/game'))
 app.use('/.netlify/functions/api/dashboard',require('../routes/dashboard'))
 
 
+app.listen(port, () => {
+    console.log(`Backend of Resume builder listening on port ${port}`)
+  })
+
 module.exports = app
 module.exports.handler = serverless(app)
